@@ -1,2 +1,2 @@
 require('babel/register');
-module.exports = require('lib/hariko');
+module.exports = require('./lib/hariko');
