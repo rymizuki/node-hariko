@@ -35,6 +35,8 @@
     "expect.js": "^0.3.1",
     "gulp": "^3.9.0",
     "gulp-mocha": "^2.1.2",
-    "sinon": "^1.15.4"
+    "require-subvert": "^0.1.0",
+    "sinon": "^1.15.4",
+    "supertest": "^1.0.1"
   }
 }
