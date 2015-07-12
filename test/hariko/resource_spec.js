@@ -100,6 +100,7 @@ describe('harikoResource', function () {
           resource.watch();
           resource.watcher.emit('all');
           expect(resource.read.calledOnce).to.be.ok();
+          resource.watcher.close();
         });
       });
       describe('with callback', function () {
@@ -115,6 +116,9 @@ describe('harikoResource', function () {
         beforeEach(function () {
           resource.watch(cb);
           resource.watcher.emit('all');
+        });
+        afterEach(function () {
+          resource.watcher.close();
         });
 
         it('should call `resource.read`', function () {
