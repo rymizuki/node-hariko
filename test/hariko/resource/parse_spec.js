@@ -100,8 +100,8 @@ describe('hariko/resource/parser', function () {
             "request": {
               "method": "GET",
               "uri": {
-                "path": "/api/item/hariko",
-                "template": "/api/item/hariko",
+                "path": "/api/item/:item_id",
+                "template": "/api/item/{item_id}",
                 "queries": []
               }
             },
@@ -116,8 +116,8 @@ describe('hariko/resource/parser', function () {
             "request": {
               "method": "GET",
               "uri": {
-                "path": "/api/item/deco",
-                "template": "/api/item/deco",
+                "path": "/api/item/:item_id",
+                "template": "/api/item/{item_id}",
                 "queries": []
               }
             },
