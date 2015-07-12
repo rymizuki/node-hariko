@@ -13,7 +13,9 @@ describe('hariko/resource/parser', function () {
   });
   describe('.parse(markdown_data)', function () {
     it('should be parse content', function () {
-      expect(parser.parse(fs.readFileSync(path.join(path.dirname(__filename), 'fixture.md')).toString())).to.be.eql({
+      var data = parser.parse(fs.readFileSync(path.join(path.dirname(__filename), 'fixture.md')).toString());
+      console.log('%j', data.warnings);
+      expect(data).to.be.eql({
         entries: [
           {
             "request": {
@@ -128,7 +130,22 @@ describe('hariko/resource/parser', function () {
             }
           }
         ],
-        warnings: []
+        warnings: [
+          {
+            "code": 5,
+            "message": "unexpected header block, expected a group, resource or an action definition, e.g. '# Group <name>', '# <resource name> [<URI>]' or '# <HTTP method> <URI>'",
+            "location": [
+              {"index": 627, "length": 7}
+            ]
+          },
+          {
+            "code": 6,
+            "message": "action is missing a response",
+            "location": [
+              {"index":634,"length":26}
+            ]
+          }
+        ]
       });
     });
   });
