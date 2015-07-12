@@ -1,4 +1,4 @@
-# node-hariko
+# node-hariko[![Build Status](https://travis-ci.org/rymizuki/node-hariko.svg?branch=master)](https://travis-ci.org/rymizuki/node-hariko)
 Mock Server that implements the API Blueprint specification.
 
 ## Get started
