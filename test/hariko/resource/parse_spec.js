@@ -14,7 +14,6 @@ describe('hariko/resource/parser', function () {
   describe('.parse(markdown_data)', function () {
     it('should be parse content', function () {
       var data = parser.parse(fs.readFileSync(path.join(path.dirname(__filename), 'fixture.md')).toString());
-      console.log('%j', data.warnings);
       expect(data).to.be.eql({
         entries: [
           {
