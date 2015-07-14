@@ -3,7 +3,9 @@
   "version": "0.0.5-0",
   "description": "Mock Server that implements the API Blueprint specification.",
   "main": "index.js",
-  "bin": "./bin/cli.js",
+  "bin": {
+    "hariko": "./bin/cli.js"
+  },
   "scripts": {
     "start": "gulp",
     "test": "gulp test"
@@ -39,5 +41,18 @@
     "require-subvert": "^0.1.0",
     "sinon": "^1.15.4",
     "supertest": "^1.0.1"
-  }
+  },
+  "directories": {
+    "bin": "bin",
+    "lib": "lib",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rymizuki/node-hariko.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rymizuki/node-hariko/issues"
+  },
+  "homepage": "https://github.com/rymizuki/node-hariko#readme"
 }
