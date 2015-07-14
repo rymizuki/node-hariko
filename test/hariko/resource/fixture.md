@@ -1,3 +1,9 @@
+# GET /
+
++ Response 200 (text/plain)
+
+        Hello world
+
 # GET /api/app
 
 + Response 200 (application/json)

@@ -17,6 +17,24 @@ describe('hariko/resource/parser', function () {
       expect(data).to.be.eql({
         entries: [
           {
+            "file": "index-GET.json",
+            "request": {
+              "method": "GET",
+              "uri": {
+                "path": "/",
+                "template": "/",
+                "queries": []
+              }
+            },
+            "response": {
+              "statusCode": 200,
+              "headers": [{"name": "Content-Type", "value": "text/plain"}],
+              "body": "Hello world\n",
+              "data": null
+            }
+          },
+          {
+            "file": "api/app-GET.json",
             "request": {
               "method": "GET",
               "uri": {
@@ -33,6 +51,7 @@ describe('hariko/resource/parser', function () {
             }
           },
           {
+            "file": "api/user{?page}-GET.json",
             "request": {
               "method": "GET",
               "uri": {
@@ -49,6 +68,7 @@ describe('hariko/resource/parser', function () {
             }
           },
           {
+            "file": "api/user/{user_id}-GET.json",
             "request": {
               "method": "GET",
               "uri": {
@@ -65,6 +85,7 @@ describe('hariko/resource/parser', function () {
             }
           },
           {
+            "file": "api/user-POST.json",
             "request": {
               "method": "POST",
               "uri": {
@@ -81,6 +102,7 @@ describe('hariko/resource/parser', function () {
             }
           },
           {
+            "file": "api/user/{user_id}-PUT.json",
             "request": {
               "method": "PUT",
               "uri": {
@@ -97,6 +119,7 @@ describe('hariko/resource/parser', function () {
             }
           },
           {
+            "file": "api/item/{item_id}-GET.json",
             "request": {
               "method": "GET",
               "uri": {
@@ -113,6 +136,7 @@ describe('hariko/resource/parser', function () {
             }
           },
           {
+            "file": "api/item/{item_id}-GET.json",
             "request": {
               "method": "GET",
               "uri": {
@@ -134,14 +158,14 @@ describe('hariko/resource/parser', function () {
             "code": 5,
             "message": "unexpected header block, expected a group, resource or an action definition, e.g. '# Group <name>', '# <resource name> [<URI>]' or '# <HTTP method> <URI>'",
             "location": [
-              {"index": 627, "length": 7}
+              {"index": 686, "length": 7}
             ]
           },
           {
             "code": 6,
             "message": "action is missing a response",
             "location": [
-              {"index":634,"length":26}
+              {"index":693,"length":26}
             ]
           }
         ]
