@@ -1,6 +1,6 @@
 {
   "name": "hariko",
-  "version": "0.0.5-0",
+  "version": "0.0.5",
   "description": "Mock Server that implements the API Blueprint specification.",
   "main": "index.js",
   "bin": {
