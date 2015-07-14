@@ -17,8 +17,25 @@ hariko\
   -p <server port>
 ```
 
-
 ## Examples
+
+### for CLI
+
+```shell
+hariko -f 'docs/**/*.md' -p 8080 -w
+```
+
+### for Node.js
+
+```javascript
+var hariko = require('hariko');
+hariko.start({
+  file: 'docs/**/*.md',
+  watch: true
+}, function () {
+  console.log('Starting hariko server.');
+});
+```
 
 ## CLI Options
 
