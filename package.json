@@ -8,7 +8,8 @@
   },
   "scripts": {
     "start": "gulp",
-    "test": "gulp test"
+    "test": "gulp test",
+    "coveralls": "istanbul cover _mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage"
   },
   "keywords": [
     "api",
@@ -35,9 +36,13 @@
   },
   "devDependencies": {
     "coffee-script": "^1.9.3",
+    "coveralls": "^2.11.2",
     "expect.js": "^0.3.1",
     "gulp": "^3.9.0",
     "gulp-mocha": "^2.1.2",
+    "istanbul": "^0.3.17",
+    "mocha": "^2.2.5",
+    "mocha-lcov-reporter": "0.0.2",
     "require-subvert": "^0.1.0",
     "sinon": "^1.15.4",
     "supertest": "^1.0.1"
