@@ -9,7 +9,7 @@
   "scripts": {
     "start": "gulp",
     "test": "gulp test",
-    "coveralls": "istanbul cover _mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage"
+    "coveralls": "istanbul cover _mocha 'test/**/*.js' --report lcovonly -- -R spec && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage"
   },
   "keywords": [
     "api",
