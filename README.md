@@ -148,7 +148,7 @@ var hariko = require('hariko');
 - startCallback
   - execute when server listening
 
-```
+```javascript
 hariko.start({file: 'docs/**/*.md'}, function () {
   console.log('hariko started!');
 });
