@@ -1,7 +1,7 @@
 # node-hariko
 Mock Server that implements the API Blueprint specification.
 
-[![npm version](https://badge.fury.io/js/hariko.svg)](http://badge.fury.io/js/hariko)[![Build Status](https://travis-ci.org/rymizuki/node-hariko.svg?branch=master)](https://travis-ci.org/rymizuki/node-hariko)
+[![npm version](https://badge.fury.io/js/hariko.svg)](http://badge.fury.io/js/hariko) [![Build Status](https://travis-ci.org/rymizuki/node-hariko.svg?branch=master)](https://travis-ci.org/rymizuki/node-hariko) [![Coverage Status](https://coveralls.io/repos/rymizuki/node-hariko/badge.svg?branch=master&service=github)](https://coveralls.io/github/rymizuki/node-hariko?branch=master)
 
 ## Get started
 
