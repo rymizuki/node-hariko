@@ -3,5 +3,5 @@ node_js:
   - v0.10
   - v0.11
   - v0.12
-after_scripts:
+after_script:
   - npm run coveralls
