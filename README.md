@@ -8,7 +8,7 @@ Mock Server that implements the API Blueprint specification.
 ### Installation
 
 ```
-npm install -g https://github.com/rymizuki/node-hariko
+npm install -g hariko
 ```
 
 ### Usage
