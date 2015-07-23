@@ -221,7 +221,7 @@ describe('harikoResource', function () {
             query:  {}
           });
           expect(entry).to.be.eql({
-            file: "api/user/{user_id}-GET.json",
+            file: "api/user/user_id-GET.json",
             request: {
               method: 'GET',
               uri: {path: '/api/user/:user_id', template: '/api/user/{user_id}', queries: []}
@@ -237,37 +237,37 @@ describe('harikoResource', function () {
       });
     });
     describe('resource has any requests', function () {
-      describe('request is GET /api/item/', function () {
+      describe('request found in examples', function () {
         it('should be return entry object', function () {
           var entry = resource.getEntry({
             method: 'GET',
             path:   '/api/item/',
-            query:  {}
+            query:  {page: 2}
           });
           expect(entry).to.be.eql({
-            file: "api/item/{?page}-GET.json",
+            file: "api/item/index?page=2-GET.json",
             request: {
               method: 'GET',
-              uri: {path: '/api/item/', template: '/api/item/{?page}', queries: ['page']}
+              uri: {path: '/api/item/', template: '/api/item/{?page}', queries: [{name: 'page', value: '2'}]}
             },
             response: {
               statusCode: 200,
               headers: [{name: 'Content-Type', value: 'application/json'}],
-              body: '    {}\n',
-              data: {}
+              body: '    {"page": 2}\n',
+              data: {page: 2}
             }
           });
         });
       });
-      describe('request is GET /api/item/?page=2', function () {
+      describe('request not found in examples', function () {
         it('should be return entry object', function () {
           var entry = resource.getEntry({
             method: 'GET',
             path:   '/api/item/',
-            query:  []
+            query:  {page: 3}
           });
           expect(entry).to.be.eql({
-            file: "api/item/{?page}-GET.json",
+            file: "api/item/index?page-GET.json",
             request: {
               method: 'GET',
               uri: {path: '/api/item/', template: '/api/item/{?page}', queries: ['page']}
@@ -275,8 +275,8 @@ describe('harikoResource', function () {
             response: {
               statusCode: 200,
               headers: [{name: 'Content-Type', value: 'application/json'}],
-              body: '    {}\n',
-              data: {}
+              body: '    {"page": 1}\n',
+              data: {page: 1}
             }
           });
         });
