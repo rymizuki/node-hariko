@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "precommit": "conventional-changelog -i CHANGELOG.md -w; git add CHANGELOG.md"
+  }
+}
