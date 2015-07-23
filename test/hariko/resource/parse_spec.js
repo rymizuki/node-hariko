@@ -51,7 +51,7 @@ describe('hariko/resource/parser', function () {
             }
           },
           {
-            "file": "api/user{?page}-GET.json",
+            "file": "api/user?page-GET.json",
             "request": {
               "method": "GET",
               "uri": {
@@ -68,7 +68,7 @@ describe('hariko/resource/parser', function () {
             }
           },
           {
-            "file": "api/user/{user_id}-GET.json",
+            "file": "api/user/user_id-GET.json",
             "request": {
               "method": "GET",
               "uri": {
@@ -102,7 +102,7 @@ describe('hariko/resource/parser', function () {
             }
           },
           {
-            "file": "api/user/{user_id}-PUT.json",
+            "file": "api/user/user_id-PUT.json",
             "request": {
               "method": "PUT",
               "uri": {
@@ -119,7 +119,7 @@ describe('hariko/resource/parser', function () {
             }
           },
           {
-            "file": "api/item/{item_id}-GET.json",
+            "file": "api/item/item_id-GET.json",
             "request": {
               "method": "GET",
               "uri": {
@@ -136,11 +136,28 @@ describe('hariko/resource/parser', function () {
             }
           },
           {
-            "file": "api/item/{item_id}-GET.json",
+            "file": "api/item/hariko-GET.json",
             "request": {
               "method": "GET",
               "uri": {
-                "path": "/api/item/:item_id",
+                "path": "/api/item/hariko",
+                "template": "/api/item/{item_id}",
+                "queries": []
+              }
+            },
+            "response": {
+              "statusCode": 200,
+              "headers": [{name: 'Content-Type', value: 'application/json'}],
+              "body": "    []\n",
+              "data": []
+            }
+          },
+          {
+            "file": "api/item/deco-GET.json",
+            "request": {
+              "method": "GET",
+              "uri": {
+                "path": "/api/item/deco",
                 "template": "/api/item/{item_id}",
                 "queries": []
               }

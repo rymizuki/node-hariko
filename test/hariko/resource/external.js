@@ -13,13 +13,13 @@ describe('resource/external', function () {
   });
   describe('.filename(method, uriObject)', function () {
     describe('when give `GET /api/path/{to}{?page}`', function () {
-      it('should be `api/path/{to}{?page}-GET.json`', function () {
+      it('should be `api/path/to?page-GET.json`', function () {
         var filename = external.filename('GET', {
           template: '/api/path/{to}{?page}',
           path:     '/api/path/:to',
           queries: ['page']
         });
-        expect(filename).to.be.eql('api/path/{to}{?page}-GET.json')
+        expect(filename).to.be.eql('api/path/to?page-GET.json')
       })
     });
     describe('when give `POST /api/path/`', function () {
@@ -30,6 +30,16 @@ describe('resource/external', function () {
           queries: []
         });
         expect(filename).to.be.eql('api/path/index-POST.json');
+      });
+    });
+    describe('when give `POST /api/path/to?page=1`', function () {
+      it('should be `/api/path/to?page=1`', function () {
+        var filename = external.filename('GET', {
+          template: '/api/path/{to}{?page}',
+          path:     '/api/path/to',
+          queries: [{name: 'page', value: 1}]
+        });
+        expect(filename).to.be.eql('api/path/to?page=1-GET.json')
       });
     });
   });
