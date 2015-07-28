@@ -3,6 +3,7 @@ Mock Server that implements the API Blueprint specification.
 
 [![npm version](https://badge.fury.io/js/hariko.svg)](http://badge.fury.io/js/hariko) 
 [![Build Status](https://travis-ci.org/rymizuki/node-hariko.svg?branch=master)](https://travis-ci.org/rymizuki/node-hariko) 
+[![Codacy Badge](https://www.codacy.com/project/badge/3d26f82e280d432183e2b768c5a78ab1)](https://www.codacy.com/app/ry-mizuki/node-hariko)
 [![Code Climate](https://codeclimate.com/github/rymizuki/node-hariko/badges/gpa.svg)](https://codeclimate.com/github/rymizuki/node-hariko)
 [![Test Coverage](https://codeclimate.com/github/rymizuki/node-hariko/badges/coverage.svg)](https://codeclimate.com/github/rymizuki/node-hariko/coverage)
 [![Inline docs](http://inch-ci.org/github/rymizuki/node-hariko.svg?branch=master)](http://inch-ci.org/github/rymizuki/node-hariko) 
