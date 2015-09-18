@@ -1,3 +1,28 @@
+<a name="1.1.1"></a>
+## 1.1.1 (2015-09-18)
+
+
+### chore
+
+* chore: add codeclimate's badges in README
+ ([701b07e](https://github.com/rymizuki/node-hariko/commit/701b07e))
+* chore: add jshint
+ ([c8c95e2](https://github.com/rymizuki/node-hariko/commit/c8c95e2))
+* chore: setting for codeclimate's coverage
+ ([7ffdf20](https://github.com/rymizuki/node-hariko/commit/7ffdf20))
+* chore(README): add codacy's badge
+ ([7fc34d6](https://github.com/rymizuki/node-hariko/commit/7fc34d6))
+
+### fix
+
+* fix(server): #3 add cors option
+ ([309005b](https://github.com/rymizuki/node-hariko/commit/309005b))
+
+* Merge pull request #4 from rymizuki/dose_not_pass_the_cors_option_to_server
+ ([23f5ef0](https://github.com/rymizuki/node-hariko/commit/23f5ef0))
+
+
+
 <a name="1.1.0"></a>
 # 1.1.0 (2015-07-23)
 
