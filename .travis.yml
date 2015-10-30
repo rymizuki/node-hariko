@@ -3,5 +3,8 @@ node_js:
   - v0.10
   - v0.11
   - v0.12
+  - v4.1
+  - v4.2
+  - v5.0
 after_script:
   - npm run covarage
