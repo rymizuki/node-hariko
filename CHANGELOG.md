@@ -1,3 +1,27 @@
+<a name="1.1.2"></a>
+## 1.1.2 (2016-06-18)
+
+
+### chore
+
+* chore(travis): update GCC
+ ([db3d781](https://github.com/rymizuki/node-hariko/commit/db3d781))
+
+### feat
+
+* feat(hariko): update protagonist
+ ([08e27a6](https://github.com/rymizuki/node-hariko/commit/08e27a6))
+
+### fix
+
+* fix(travis): indantation miss
+ ([e40ffe0](https://github.com/rymizuki/node-hariko/commit/e40ffe0))
+
+* Merge pull request #6 from rymizuki/node_v4
+ ([539d82f](https://github.com/rymizuki/node-hariko/commit/539d82f))
+
+
+
 <a name="1.1.1"></a>
 ## 1.1.1 (2015-09-18)
 
