@@ -49,11 +49,15 @@ describe('resource/external', function () {
       external.save('test/.output', [
         {file: 'api/app-GET.json', response: {data: {"message": "hello api."}}},
         {file: 'api/user/index-GET.json', response: {data: {"message": "hello world."}}},
+        {file: 'api/multiple-GET.json', response: {data: {"message": "first response."}}},
+        {file: 'api/multiple-GET.json', response: {data: {"message": "second response."}}},
       ]);
       expect(fs.readFileSync('test/.output/api/app-GET.json').toString())
         .to.be.eql('{\n    message: "hello api."\n}');
       expect(fs.readFileSync('test/.output/api/user/index-GET.json').toString())
         .to.be.eql('{\n    message: "hello world."\n}');
+      expect(fs.readFileSync('test/.output/api/multiple-GET.json').toString())
+        .to.be.eql('{\n    message: "first response."\n}');
     });
   });
 
