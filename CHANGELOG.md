@@ -1,3 +1,16 @@
+<a name="1.1.3"></a>
+## 1.1.3 (2017-01-12)
+
+
+* fix houndci-bot review
+ ([99d9670](https://github.com/rymizuki/node-hariko/commit/99d9670))
+* fix output multiple responses
+ ([2f3c66c](https://github.com/rymizuki/node-hariko/commit/2f3c66c))
+* Merge pull request #7 from 170/fix/output_multiple_responses
+ ([2054699](https://github.com/rymizuki/node-hariko/commit/2054699))
+
+
+
 <a name="1.1.2"></a>
 ## 1.1.2 (2016-06-18)
 
