@@ -1,3 +1,19 @@
+<a name="1.1.4"></a>
+## 1.1.4 (2017-02-01)
+
+
+### refacotr
+
+* refacotr(resource): formatted syntax.
+ ([f4c8562](https://github.com/rymizuki/node-hariko/commit/f4c8562))
+
+* fix routing priority
+ ([9d1d20b](https://github.com/rymizuki/node-hariko/commit/9d1d20b))
+* Merge pull request #8 from rymizuki/fix_routing_priority
+ ([8f69f70](https://github.com/rymizuki/node-hariko/commit/8f69f70))
+
+
+
 <a name="1.1.3"></a>
 ## 1.1.3 (2017-01-12)
 
