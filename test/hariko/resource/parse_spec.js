@@ -119,23 +119,6 @@ describe('hariko/resource/parser', function () {
             }
           },
           {
-            "file": "api/item/item_id-GET.json",
-            "request": {
-              "method": "GET",
-              "uri": {
-                "path": "/api/item/:item_id",
-                "template": "/api/item/{item_id}",
-                "queries": []
-              }
-            },
-            "response": {
-              "statusCode": 200,
-              "headers": [{name: 'Content-Type', value: 'application/json'}],
-              "body": "    []\n",
-              "data": []
-            }
-          },
-          {
             "file": "api/item/hariko-GET.json",
             "request": {
               "method": "GET",
@@ -168,7 +151,24 @@ describe('hariko/resource/parser', function () {
               "body": "    []\n",
               "data": []
             }
-          }
+          },
+          {
+            "file": "api/item/item_id-GET.json",
+            "request": {
+              "method": "GET",
+              "uri": {
+                "path": "/api/item/:item_id",
+                "template": "/api/item/{item_id}",
+                "queries": []
+              }
+            },
+            "response": {
+              "statusCode": 200,
+              "headers": [{name: 'Content-Type', value: 'application/json'}],
+              "body": "    []\n",
+              "data": []
+            }
+          },
         ],
         warnings: [
           {
