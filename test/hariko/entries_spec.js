@@ -1,5 +1,4 @@
-var sinon  = require('sinon'),
-    expect = require('expect.js');
+var expect = require('expect.js');
 var Entries = require('../../lib/hariko/entries');
 
 describe('Entries', function () {
@@ -23,7 +22,7 @@ describe('Entries', function () {
       ];
       entries.ensure(rawData);
       expect(entries.rows).to.be.equal(rawData);
-    })
+    });
   });
   describe('.get', function () {
     describe('rejection', function () {
@@ -33,7 +32,12 @@ describe('Entries', function () {
         fixture = [
           {
             file: 'api/file-GET.json',
-            request: { method: 'GET', uri: {path: '/api/app', template: '/api/app', queries: []}},
+            request: {
+              method: 'GET',
+              uri: {path: '/api/app',
+              template: '/api/app',
+              queries: []}
+            },
           }
         ];
         entries = new Entries();
@@ -41,19 +45,31 @@ describe('Entries', function () {
       });
       describe('matching', function () {
         it('should be entry', function () {
-          var entry = entries.get({ method: 'GET', path: '/api/app', query: {} });
+          var entry = entries.get({
+            method: 'GET',
+            path: '/api/app',
+            query: {}
+          });
           expect(entry).to.be.eql(fixture[0]);
         });
       });
       describe('non-matching method', function () {
         it('should be undefined', function () {
-          var entry = entries.get({ method: 'POST', path: '/api/app', query: {} });
+          var entry = entries.get({
+            method: 'POST',
+            path: '/api/app',
+            query: {}
+          });
           expect(entry).to.be.eql(undefined);
         });
       });
       describe('non-matching path', function () {
         it('should be undefined', function () {
-          var entry = entries.get({ method: 'GET', path: '/api/notfound', query: {} });
+          var entry = entries.get({
+            method: 'GET',
+            path: '/api/notfound',
+            query: {}
+          });
           expect(entry).to.be.eql(undefined);
         });
       });
@@ -63,7 +79,9 @@ describe('Entries', function () {
       var fixture;
       beforeEach(function () {
         fixture = [
-          { request: { method: 'GET', uri: { path: '/api/app', queries: [] }}},
+          {
+            request: { method: 'GET', uri: { path: '/api/app', queries: [] }}
+          },
           { request: { method: 'GET', uri: { path: '/api/app', queries: [
             'a'
           ]}}},
@@ -170,4 +188,4 @@ describe('Entries', function () {
       expect(entries.raw()).to.be.equal(rawData);
     });
   });
-})
+});
