@@ -68,7 +68,7 @@ describe('Entries', function () {
           { request: { method: 'GET', uri: { path: '/api/app', queries: [ {name: 'b', value: '1'}, {name: 'c', value: '2'} ]}, } },
           { request: { method: 'GET', uri: { path: '/api/app2', queries: ['a'] }, } },
         ];
-        entries = new Entries;
+        entries = new Entries();
         entries.ensure(fixture);
       });
       describe('not exists', function () {
