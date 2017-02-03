@@ -55,9 +55,9 @@ describe('harikoResource', function () {
     });
 
     describe('when parse successful', function () {
-      it('should be return data', function () {
+      it('should be has entries', function () {
         resource.read();
-        expect(resource._data).to.be.eql([
+        expect(resource.entries.raw()).to.be.eql([
           {
             "file": "api/app-GET.json",
             "request": {
