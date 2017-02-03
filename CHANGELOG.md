@@ -1,3 +1,32 @@
+<a name="1.1.6"></a>
+## 1.1.6 (2017-02-03)
+
+
+### fix
+
+* fix(resource): Entries not being properly returned when parameters are present.
+ ([3630d14](https://github.com/rymizuki/node-hariko/commit/3630d14))
+
+### refactor
+
+* refactor(entry): format code style
+ ([95c07c8](https://github.com/rymizuki/node-hariko/commit/95c07c8))
+* refactor(test): format code style
+ ([956f1fd](https://github.com/rymizuki/node-hariko/commit/956f1fd))
+* refactor(test): format quotes
+ ([4aed282](https://github.com/rymizuki/node-hariko/commit/4aed282))
+* refactor(test): include semicolon
+ ([074bfe4](https://github.com/rymizuki/node-hariko/commit/074bfe4))
+* refactor(test): invoking a constructor
+ ([641a339](https://github.com/rymizuki/node-hariko/commit/641a339))
+
+* 1.1.5
+ ([be0df42](https://github.com/rymizuki/node-hariko/commit/be0df42))
+* Merge pull request #9 from rymizuki/fix_extra_query_entry
+ ([de2f5c4](https://github.com/rymizuki/node-hariko/commit/de2f5c4))
+
+
+
 <a name="1.1.5"></a>
 ## 1.1.5 (2017-02-03)
 
