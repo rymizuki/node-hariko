@@ -8,16 +8,16 @@ describe('Entries', function () {
       var entries = new Entries();
       var rawData = [
         {
-          "file": "api/app-GET.json",
-          "request": {
-            "method": "GET",
-            "uri": {"path": "/api/app", "template": "/api/app", "queries": []}
+          file: 'api/app-GET.json',
+          request: {
+            method: 'GET',
+            uri: {'path': '/api/app', 'template': '/api/app', 'queries': []}
           },
-          "response": {
-            "statusCode": 200,
-            "headers": [{"name": "Content-Type", "value": "application/json"}],
-            "body": "    {\n      \"status\": 200\n    }\n",
-            "data": {"status": 200}
+          response: {
+            statusCode: 200,
+            headers: [{'name': 'Content-Type', 'value': 'application/json'}],
+            body: '    {\n      \'status\': 200\n    }\n',
+            data: {'status': 200}
           }
         },
       ];
@@ -118,16 +118,16 @@ describe('Entries', function () {
       var entries = new Entries();
       var rawData = [
         {
-          "file": "api/app-GET.json",
-          "request": {
-            "method": "GET",
-            "uri": {"path": "/api/app", "template": "/api/app", "queries": []}
+          file: 'api/app-GET.json',
+          request: {
+            method: 'GET',
+            uri: {'path': '/api/app', 'template': '/api/app', 'queries': []}
           },
-          "response": {
-            "statusCode": 200,
-            "headers": [{"name": "Content-Type", "value": "application/json"}],
-            "body": "    {\n      \"status\": 200\n    }\n",
-            "data": {"status": 200}
+          response: {
+            statusCode: 200,
+            headers: [{'name': 'Content-Type', 'value': 'application/json'}],
+            body: '    {\n      \'status\': 200\n    }\n',
+            data: {'status': 200}
           }
         },
       ];
@@ -135,4 +135,4 @@ describe('Entries', function () {
       expect(entries.raw()).to.be.equal(rawData);
     });
   });
-});
+})
