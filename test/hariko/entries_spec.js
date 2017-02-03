@@ -63,51 +63,86 @@ describe('Entries', function () {
       var fixture;
       beforeEach(function () {
         fixture = [
-          { request: { method: 'GET', uri: { path: '/api/app', queries: [] }, } },
-          { request: { method: 'GET', uri: { path: '/api/app', queries: [ 'a' ]}, } },
-          { request: { method: 'GET', uri: { path: '/api/app', queries: [ {name: 'b', value: '1'}, {name: 'c', value: '2'} ]}, } },
-          { request: { method: 'GET', uri: { path: '/api/app2', queries: ['a'] }, } },
+          { request: { method: 'GET', uri: { path: '/api/app', queries: [] }}},
+          { request: { method: 'GET', uri: { path: '/api/app', queries: [
+            'a'
+          ]}}},
+          { request: { method: 'GET', uri: { path: '/api/app', queries: [
+            {name: 'b', value: '1'},
+            {name: 'c', value: '2'}
+          ]}}},
+          { request: { method: 'GET', uri: { path: '/api/app2', queries: [
+            'a'
+          ]}}},
         ];
         entries = new Entries();
         entries.ensure(fixture);
       });
       describe('not exists', function () {
         it('should be entry', function () {
-          var entry = entries.get({ method: 'GET', path: '/api/app', query: {} });
+          var entry = entries.get({
+            method: 'GET',
+            path: '/api/app',
+            query: {}
+          });
           expect(entry).to.be.eql(fixture[0]);
         });
       });
       describe('perfect matched', function () {
         it('should be entry', function () {
-          var entry = entries.get({ method: 'GET', path: '/api/app', query: {b: '1', c: '2'} });
+          var entry = entries.get({
+            method: 'GET',
+            path: '/api/app',
+            query: {b: '1', c: '2'}
+          });
           expect(entry).to.be.eql(fixture[2]);
         });
       });
       describe('partial matched', function () {
         it('should be entry', function () {
-          var entry = entries.get({ method: 'GET', path: '/api/app', query: {b: '1'} });
+          var entry = entries.get({
+            method: 'GET',
+            path: '/api/app',
+            query: {b: '1'}
+          });
           expect(entry).to.be.eql(fixture[2]);
         });
         it('should be entry', function () {
-          var entry = entries.get({ method: 'GET', path: '/api/app', query: {b: '1', c: '5'} });
+          var entry = entries.get({
+            method: 'GET',
+            path: '/api/app',
+            query: {b: '1', c: '5'}
+          });
           expect(entry).to.be.eql(fixture[2]);
         });
       });
       describe('key matched', function () {
         it('should be entry', function () {
-          var entry = entries.get({ method: 'GET', path: '/api/app', query: {a: '1'} });
+          var entry = entries.get({
+            method: 'GET',
+            path: '/api/app',
+            query: {a: '1'}
+          });
           expect(entry).to.be.eql(fixture[1]);
         });
       });
       describe('non-matched', function () {
         it('should be entry', function () {
-          var entry = entries.get({ method: 'GET', path: '/api/app2', query: {xxx: '1'} });
+          var entry = entries.get({
+            method: 'GET',
+            path: '/api/app2',
+            query: {xxx: '1'}
+          });
           expect(entry).to.be.eql(fixture[3]);
         });
       });
       describe('extra', function () {
         it('should be entry', function () {
-          var entry = entries.get({ method: 'GET', path: '/api/app', query: {xxx: '1'} });
+          var entry = entries.get({
+            method: 'GET',
+            path: '/api/app',
+            query: {xxx: '1'}
+          });
           expect(entry).to.be.eql(fixture[2]);
         });
       });
