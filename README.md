@@ -124,6 +124,14 @@ By default `false`.
 hariko -f 'docs/**/*.md' -v
 ```
 
+## CORS
+
+Send CORS header.
+By default `false`.
+```
+hariko -f 'docs/**/*.md' --cors
+```
+
 ### log-level
 
 set to log level.
