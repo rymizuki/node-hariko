@@ -193,8 +193,8 @@ describe('hariko/resource/parser', function () {
     describe('when linebreak by \r', function () {
       var data;
       beforeEach(function () {
-        data = parser.parse(`\r# GET /api/message\r\r+ Response 200 (application/json)\r\r  + Body\r\r            {message: \"hello\"}\r\r`);
-      })
+        data = parser.parse("\r# GET /api/message\r\r+ Response 200 (application/json)\r\r  + Body\r\r            {message: \"hello\"}\r\r");
+      });
       it('should be enable parse', function () {
         expect(data).to.be.eql({
           entries: [
@@ -219,8 +219,8 @@ describe('hariko/resource/parser', function () {
             }
           ],
           warnings: []
-        })
-      })
+        });
+      });
     });
   });
 });
