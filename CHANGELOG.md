@@ -1,3 +1,33 @@
+<a name="1.1.7"></a>
+## 1.1.7 (2017-12-24)
+
+
+### chore
+
+* chore(travis): add support version v8.9
+ ([dfab280](https://github.com/rymizuki/node-hariko/commit/dfab280))
+
+* Add cors option
+ ([871635c](https://github.com/rymizuki/node-hariko/commit/871635c))
+* feat(resource/parser): support carriage '\r' in source data
+ ([1114bba](https://github.com/rymizuki/node-hariko/commit/1114bba))
+* Merge pull request #10 from ichiwa/patch-1
+ ([db8127a](https://github.com/rymizuki/node-hariko/commit/db8127a))
+* Merge pull request #12 from rymizuki/fix_failing_tests
+ ([ebaf9cb](https://github.com/rymizuki/node-hariko/commit/ebaf9cb))
+* Merge pull request #13 from rymizuki/issue/11
+ ([ab79538](https://github.com/rymizuki/node-hariko/commit/ab79538))
+* refactor(resource/parser): fix semicolon
+ ([034109e](https://github.com/rymizuki/node-hariko/commit/034109e))
+* test(hariko/resource): fix getEntry response data
+ ([606d55f](https://github.com/rymizuki/node-hariko/commit/606d55f))
+* test(hariko/server-middleware/routing): fix content-type
+ ([888ee32](https://github.com/rymizuki/node-hariko/commit/888ee32))
+* test(resource/parser): fix code style
+ ([af2db91](https://github.com/rymizuki/node-hariko/commit/af2db91))
+
+
+
 <a name="1.1.6"></a>
 ## 1.1.6 (2017-02-03)
 
