@@ -40,7 +40,7 @@ describe('server-middleware/routing', function () {
       it('should be entry response', function (done) {
         request(app)
           .get('/')
-          .expect('Content-Type', 'application/json')
+          .expect('Content-Type', 'application/json; charset=utf-8')
           .expect(JSON.stringify({ message: 'hello world'}))
           .expect(200, done);
       });
