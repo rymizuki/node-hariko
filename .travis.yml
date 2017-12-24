@@ -4,6 +4,7 @@ node_js:
   - v0.12
   - v4.4
   - v6.2
+  - v8.9
 addons:
   apt:
     sources:
