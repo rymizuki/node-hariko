@@ -245,16 +245,16 @@ describe('harikoResource', function () {
             query:  {page: 2}
           });
           expect(entry).to.be.eql({
-            file: "api/item/index?page=2-GET.json",
+            file: "api/item/index?page-GET.json",
             request: {
               method: 'GET',
-              uri: {path: '/api/item/', template: '/api/item/{?page}', queries: [{name: 'page', value: '2'}]}
+              uri: {path: '/api/item/', template: '/api/item/{?page}', queries: ['page']}
             },
             response: {
               statusCode: 200,
               headers: [{name: 'Content-Type', value: 'application/json'}],
-              body: '    {"page": 2}\n',
-              data: {page: 2}
+              body: '    {"page": 1}\n',
+              data: {page: 1}
             }
           });
         });
