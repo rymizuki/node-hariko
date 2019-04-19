@@ -1,13 +1,15 @@
 var expect  = require('expect.js'),
     sinon   = require('sinon'),
-    subvert = require('require-subvert')(__dirname);
+    subvert = require('require-subvert')(__dirname),
+    _external = require('../../lib/hariko/resource/external');
 
 describe('harikoResource', function () {
   var external;
   beforeEach(function () {
     external = {
       read: sinon.stub(),
-      save: sinon.stub()
+      save: sinon.stub(),
+      filename: _external.filename
     };
     subvert.subvert('../../lib/hariko/resource/external', external);
   });
@@ -248,13 +250,15 @@ describe('harikoResource', function () {
             file: "api/item/index?page-GET.json",
             request: {
               method: 'GET',
-              uri: {path: '/api/item/', template: '/api/item/{?page}', queries: ['page']}
+              uri: {path: '/api/item/', template: '/api/item/{?page}', queries: [
+                {name: 'page', value: '2'}
+              ]}
             },
             response: {
               statusCode: 200,
               headers: [{name: 'Content-Type', value: 'application/json'}],
-              body: '    {"page": 1}\n',
-              data: {page: 1}
+              body: '    {"page": 2}\n',
+              data: {page: 2}
             }
           });
         });
@@ -332,3 +336,4 @@ describe('harikoResource', function () {
     });
   });
 });
+
