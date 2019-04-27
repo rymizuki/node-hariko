@@ -8,7 +8,9 @@
   },
   "scripts": {
     "start": "gulp",
-    "test": "gulp test",
+    "test": "npm run test:js; npm run test:ts",
+    "test:js": "gulp test",
+    "test:ts": "TS_NODE_FILES=true mocha --require espower-typescript/guess src/**/*.test.ts",
     "coverage": "istanbul cover _mocha 'test/**/*.js' --report lcovonly -- -R spec --no-color && cat ./coverage/lcov.info | codeclimate-test-reporter && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage",
     "bump": "mversion $1 -m '%s'"
   },
@@ -36,22 +38,30 @@
     "yargs": "^3.15.0"
   },
   "devDependencies": {
+    "@types/json5": "0.0.30",
+    "@types/mocha": "^5.2.6",
+    "@types/node": "^11.13.8",
     "codeclimate-test-reporter": "^0.1.0",
     "coffee-script": "^1.9.3",
     "conventional-changelog": "^0.1.3",
     "coveralls": "^2.11.2",
+    "espower-typescript": "^9.0.2",
     "expect.js": "^0.3.1",
     "gulp": "^3.9.0",
     "gulp-jshint": "^1.11.2",
     "gulp-mocha": "^2.1.2",
     "istanbul": "^0.3.17",
     "jshint-stylish": "^2.0.1",
-    "mocha": "^2.2.5",
+    "mocha": "^6.1.4",
     "mocha-lcov-reporter": "0.0.2",
     "mversion": "^1.10.0",
+    "power-assert": "^1.6.1",
+    "prettier": "^1.17.0",
     "require-subvert": "^0.1.0",
     "sinon": "^1.15.4",
-    "supertest": "^1.0.1"
+    "supertest": "^1.0.1",
+    "tslint": "^5.16.0",
+    "typescript": "^3.4.5"
   },
   "directories": {
     "bin": "bin",
