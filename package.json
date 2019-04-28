@@ -37,7 +37,7 @@
     "lodash": "^4.17.11",
     "mkdirp": "^0.5.1",
     "path-to-regexp": "^1.2.0",
-    "protagonist": "^2.0.0-pre.5",
+    "protagonist": "^2.0.0-pre.6",
     "yargs": "^3.15.0"
   },
   "devDependencies": {
