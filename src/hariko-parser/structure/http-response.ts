@@ -4,30 +4,30 @@ import { HttpTransaction } from './http-transaction'
 export class HttpResponse {
   constructor(
     public readonly http_transaction: HttpTransaction,
-    private _status_code: number,
-    private _headers: HttpResponseHeaders,
+    private orig_status_code: number,
+    private orig_headers: HttpResponseHeaders,
     public body: string
   ) {}
 
   get status_code() {
-    return Number(this._status_code)
+    return Number(this.orig_status_code)
   }
 
   get headers() {
-    return this._headers.toJson()
+    return this.orig_headers.toJson()
   }
 
   clone() {
     return new HttpResponse(
       this.http_transaction,
-      this._status_code,
-      this._headers.clone(),
+      this.orig_status_code,
+      this.orig_headers.clone(),
       this.body
     )
   }
 
   isJsonResponse() {
-    const content_type = this._headers.get('Content-Type')
+    const content_type = this.orig_headers.get('Content-Type')
     if (content_type && /json/.test(content_type)) {
       return true
     }
@@ -72,7 +72,7 @@ export class HttpResponseHeaders {
   }
 
   indexOf(name: string) {
-    for (let i = 0; i < this.rows.length; i++) {
+    for (let i = 0; i < this.rows.length; i += 1) {
       if (this.rows[i].name === name) return i
     }
     return -1

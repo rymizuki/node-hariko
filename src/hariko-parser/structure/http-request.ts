@@ -7,12 +7,12 @@ export class HttpRequest {
   constructor(
     public readonly http_transaction: HttpTransaction,
     public method: HttpRequestMethod,
-    private _uri_template: string | null
+    private orig_uri_template: string | null
   ) {}
 
   get uri_template() {
-    return this._uri_template
-      ? this._uri_template
+    return this.orig_uri_template
+      ? this.orig_uri_template
       : this.http_transaction.transition.resource.uri_template
   }
 
@@ -20,12 +20,12 @@ export class HttpRequest {
     return new HttpRequest(
       this.http_transaction,
       this.method,
-      this._uri_template
+      this.orig_uri_template
     )
   }
 
   hasSpecificUri() {
-    return this._uri_template !== null
+    return this.orig_uri_template !== null
   }
 
   static create(

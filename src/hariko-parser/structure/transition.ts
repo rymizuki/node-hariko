@@ -11,7 +11,7 @@ export class TransitionStructure {
   ) {}
 
   hasMultipleRequest() {
-    for (let i = 0; i < this.http_transactions.length; i++) {
+    for (let i = 0; i < this.http_transactions.length; i += 1) {
       const request = this.http_transactions[i].request
       if (request.hasSpecificUri()) return true
     }

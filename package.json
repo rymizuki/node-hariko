@@ -10,7 +10,8 @@
     "start": "gulp",
     "test": "npm run test:js; npm run test:ts",
     "test:js": "gulp test",
-    "test:ts": "TS_NODE_FILES=true mocha --require espower-typescript/guess src/**/*.test.ts",
+    "test:ts": "npm run lint:ts; TS_NODE_FILES=true mocha --require espower-typescript/guess src/**/*.test.ts",
+    "lint:ts": "tslint --project .",
     "coverage": "istanbul cover _mocha 'test/**/*.js' --report lcovonly -- -R spec --no-color && cat ./coverage/lcov.info | codeclimate-test-reporter && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage",
     "bump": "mversion $1 -m '%s'"
   },
@@ -61,6 +62,8 @@
     "sinon": "^1.15.4",
     "supertest": "^1.0.1",
     "tslint": "^5.16.0",
+    "tslint-config-airbnb": "^5.11.1",
+    "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.4.5"
   },
   "directories": {
