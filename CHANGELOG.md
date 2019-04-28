@@ -1,3 +1,21 @@
+# [1.2.0](https://github.com/rymizuki/node-hariko/compare/v1.1.7...v1.2.0) (2019-04-28)
+
+
+### Bug Fixes
+
+* **resource/parser:** fixed parser for protagonist v2 ([16f88ab](https://github.com/rymizuki/node-hariko/commit/16f88ab))
+* **uri-parser:** fix from eslint warnings ([917dc95](https://github.com/rymizuki/node-hariko/commit/917dc95))
+
+
+### Features
+
+* **hariko:** replace parser logic, and remove old codes. ([653f646](https://github.com/rymizuki/node-hariko/commit/653f646))
+* **hariko-parser:** added hariko's parsing structure ([3ab065c](https://github.com/rymizuki/node-hariko/commit/3ab065c))
+* **hariko-parser:** added uri-parser ([3732a9e](https://github.com/rymizuki/node-hariko/commit/3732a9e))
+* **hariko-parser:** parsing resource and return entries ([07dcb72](https://github.com/rymizuki/node-hariko/commit/07dcb72))
+
+
+
 ## [1.1.7](https://github.com/rymizuki/node-hariko/compare/v1.1.6...v1.1.7) (2017-12-24)
 
 
