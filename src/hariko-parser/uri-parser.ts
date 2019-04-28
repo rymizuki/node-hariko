@@ -1,4 +1,4 @@
-const PARAM_OPERATORS_REG = /\#\+\?\&/g
+const PARAM_OPERATORS_REG = /#\+\?&/g
 const PATHNAME_REG = /\{(.*?)\}/g
 const URL_SPLIT_REG = /\{?\?/
 
@@ -24,7 +24,7 @@ export class UriParser {
 
   private parseQuery(param_base: string) {
     return param_base
-      .split(/\,|\{|\}/g)
+      .split(/,|\{|\}/g)
       .map((param) => param.replace(PARAM_OPERATORS_REG, ''))
       .filter((param) => param.length)
       .map((param) => {
