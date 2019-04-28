@@ -12,5 +12,11 @@ addons:
       - g++-4.8
 env:
   - CXX="g++-4.8" CC="gcc-4.8"
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+script:
+  - npx nyc --reporter=lcov npm test
 after_script:
-  - npm run covarage
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
