@@ -8,9 +8,10 @@
   },
   "scripts": {
     "start": "gulp",
-    "test": "npm run test:js; npm run test:ts",
+    "build": "npm run lint:ts; tsc",
+    "test": "npm run test:js && npm run test:ts",
     "test:js": "gulp test",
-    "test:ts": "npm run lint:ts; TS_NODE_FILES=true mocha --require espower-typescript/guess src/**/*.test.ts",
+    "test:ts": "npm run lint:ts && TS_NODE_FILES=true mocha --require espower-typescript/guess src/**/*.test.ts",
     "lint:ts": "tslint --project .",
     "coverage": "istanbul cover _mocha 'test/**/*.js' --report lcovonly -- -R spec --no-color && cat ./coverage/lcov.info | codeclimate-test-reporter && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage",
     "bump": "mversion $1 -m '%s'"
