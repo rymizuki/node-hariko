@@ -11,38 +11,6 @@ describe('resource/external', function () {
   afterEach(function () {
     subvert.cleanUp();
   });
-  describe('.filename(method, uriObject)', function () {
-    describe('when give `GET /api/path/{to}{?page}`', function () {
-      it('should be `api/path/to?page-GET.json`', function () {
-        var filename = external.filename('GET', {
-          template: '/api/path/{to}{?page}',
-          path:     '/api/path/:to',
-          queries: ['page']
-        });
-        expect(filename).to.be.eql('api/path/to?page-GET.json')
-      })
-    });
-    describe('when give `POST /api/path/`', function () {
-      it('should be `api/path/index-POST.json`', function () {
-        var filename = external.filename('POST', {
-          template: '/api/path/',
-          path:     '/api/path/',
-          queries: []
-        });
-        expect(filename).to.be.eql('api/path/index-POST.json');
-      });
-    });
-    describe('when give `POST /api/path/to?page=1`', function () {
-      it('should be `/api/path/to?page=1`', function () {
-        var filename = external.filename('GET', {
-          template: '/api/path/{to}{?page}',
-          path:     '/api/path/to',
-          queries: [{name: 'page', value: 1}]
-        });
-        expect(filename).to.be.eql('api/path/to?page=1-GET.json')
-      });
-    });
-  });
 
   describe('.save(destribution, entries)', function () {
     it('should be write json files', function () {

@@ -1,5 +1,6 @@
 /.node-version
 node_modules/
+/coverage
 .output/
 .DS_Store
 .swp
