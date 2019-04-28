@@ -1,13 +1,11 @@
 # node-hariko
+
 Mock Server that implements the API Blueprint specification.
 
-[![npm version](https://badge.fury.io/js/hariko.svg)](http://badge.fury.io/js/hariko) 
-[![Build Status](https://travis-ci.org/rymizuki/node-hariko.svg?branch=master)](https://travis-ci.org/rymizuki/node-hariko) 
-[![Codacy Badge](https://www.codacy.com/project/badge/3d26f82e280d432183e2b768c5a78ab1)](https://www.codacy.com/app/ry-mizuki/node-hariko)
+[![npm version](https://badge.fury.io/js/hariko.svg)](http://badge.fury.io/js/hariko)
+[![Build Status](https://travis-ci.org/rymizuki/node-hariko.svg?branch=master)](https://travis-ci.org/rymizuki/node-hariko)
 [![Code Climate](https://codeclimate.com/github/rymizuki/node-hariko/badges/gpa.svg)](https://codeclimate.com/github/rymizuki/node-hariko)
 [![Test Coverage](https://codeclimate.com/github/rymizuki/node-hariko/badges/coverage.svg)](https://codeclimate.com/github/rymizuki/node-hariko/coverage)
-[![Inline docs](http://inch-ci.org/github/rymizuki/node-hariko.svg?branch=master)](http://inch-ci.org/github/rymizuki/node-hariko) 
-[![Dependency Status](https://gemnasium.com/rymizuki/node-hariko.svg)](https://gemnasium.com/rymizuki/node-hariko) 
 
 ## Get started
 
@@ -36,13 +34,16 @@ hariko -f 'docs/**/*.md' -p 8080 -w
 ### for Node.js
 
 ```javascript
-var hariko = require('hariko');
-hariko.start({
-  file: 'docs/**/*.md',
-  watch: true
-}, function () {
-  console.log('Starting hariko server.');
-});
+var hariko = require('hariko')
+hariko.start(
+  {
+    file: 'docs/**/*.md',
+    watch: true
+  },
+  function() {
+    console.log('Starting hariko server.')
+  }
+)
 ```
 
 ## CLI Options
@@ -128,6 +129,7 @@ hariko -f 'docs/**/*.md' -v
 
 Send CORS header.
 By default `false`.
+
 ```
 hariko -f 'docs/**/*.md' --cors
 ```
@@ -152,7 +154,7 @@ hariko -f 'docs/**/*.md' -t
 ## API
 
 ```javascript
-var hariko = require('hariko');
+var hariko = require('hariko')
 ```
 
 ### hariko.start(options [, startCalleback]);
@@ -163,12 +165,11 @@ var hariko = require('hariko');
   - execute when server listening
 
 ```javascript
-hariko.start({file: 'docs/**/*.md'}, function () {
-  console.log('hariko started!');
-});
+hariko.start({ file: 'docs/**/*.md' }, function() {
+  console.log('hariko started!')
+})
 ```
 
 ## License
 
 MIT
-

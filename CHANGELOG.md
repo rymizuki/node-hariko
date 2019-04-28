@@ -1,161 +1,81 @@
-<a name="1.1.7"></a>
-## 1.1.7 (2017-12-24)
+## [1.1.7](https://github.com/rymizuki/node-hariko/compare/v1.1.6...v1.1.7) (2017-12-24)
 
 
-### chore
+### Features
 
-* chore(travis): add support version v8.9
- ([dfab280](https://github.com/rymizuki/node-hariko/commit/dfab280))
-
-* Add cors option
- ([871635c](https://github.com/rymizuki/node-hariko/commit/871635c))
-* feat(resource/parser): support carriage '\r' in source data
- ([1114bba](https://github.com/rymizuki/node-hariko/commit/1114bba))
-* Merge pull request #10 from ichiwa/patch-1
- ([db8127a](https://github.com/rymizuki/node-hariko/commit/db8127a))
-* Merge pull request #12 from rymizuki/fix_failing_tests
- ([ebaf9cb](https://github.com/rymizuki/node-hariko/commit/ebaf9cb))
-* Merge pull request #13 from rymizuki/issue/11
- ([ab79538](https://github.com/rymizuki/node-hariko/commit/ab79538))
-* refactor(resource/parser): fix semicolon
- ([034109e](https://github.com/rymizuki/node-hariko/commit/034109e))
-* test(hariko/resource): fix getEntry response data
- ([606d55f](https://github.com/rymizuki/node-hariko/commit/606d55f))
-* test(hariko/server-middleware/routing): fix content-type
- ([888ee32](https://github.com/rymizuki/node-hariko/commit/888ee32))
-* test(resource/parser): fix code style
- ([af2db91](https://github.com/rymizuki/node-hariko/commit/af2db91))
+* **resource/parser:** support carriage '\r' in source data ([1114bba](https://github.com/rymizuki/node-hariko/commit/1114bba))
 
 
 
-<a name="1.1.6"></a>
-## 1.1.6 (2017-02-03)
+## [1.1.6](https://github.com/rymizuki/node-hariko/compare/v1.1.4...v1.1.6) (2017-02-03)
 
 
-### fix
+### Bug Fixes
 
-* fix(resource): Entries not being properly returned when parameters are present.
- ([3630d14](https://github.com/rymizuki/node-hariko/commit/3630d14))
-
-### refactor
-
-* refactor(entry): format code style
- ([95c07c8](https://github.com/rymizuki/node-hariko/commit/95c07c8))
-* refactor(test): format code style
- ([956f1fd](https://github.com/rymizuki/node-hariko/commit/956f1fd))
-* refactor(test): format quotes
- ([4aed282](https://github.com/rymizuki/node-hariko/commit/4aed282))
-* refactor(test): include semicolon
- ([074bfe4](https://github.com/rymizuki/node-hariko/commit/074bfe4))
-* refactor(test): invoking a constructor
- ([641a339](https://github.com/rymizuki/node-hariko/commit/641a339))
-
-* 1.1.5
- ([be0df42](https://github.com/rymizuki/node-hariko/commit/be0df42))
-* Merge pull request #9 from rymizuki/fix_extra_query_entry
- ([de2f5c4](https://github.com/rymizuki/node-hariko/commit/de2f5c4))
+* **resource:** Entries not being properly returned when parameters are present. ([3630d14](https://github.com/rymizuki/node-hariko/commit/3630d14))
 
 
 
-<a name="1.1.5"></a>
-## 1.1.5 (2017-02-03)
+## [1.1.4](https://github.com/rymizuki/node-hariko/compare/v1.1.3...v1.1.4) (2017-02-01)
 
 
 
-
-<a name="1.1.4"></a>
-## 1.1.4 (2017-02-01)
-
-
-### refacotr
-
-* refacotr(resource): formatted syntax.
- ([f4c8562](https://github.com/rymizuki/node-hariko/commit/f4c8562))
-
-* fix routing priority
- ([9d1d20b](https://github.com/rymizuki/node-hariko/commit/9d1d20b))
-* Merge pull request #8 from rymizuki/fix_routing_priority
- ([8f69f70](https://github.com/rymizuki/node-hariko/commit/8f69f70))
+## [1.1.3](https://github.com/rymizuki/node-hariko/compare/v1.1.2...v1.1.3) (2017-01-12)
 
 
 
-<a name="1.1.3"></a>
-## 1.1.3 (2017-01-12)
+## [1.1.2](https://github.com/rymizuki/node-hariko/compare/v1.1.1...v1.1.2) (2016-06-18)
 
 
-* fix houndci-bot review
- ([99d9670](https://github.com/rymizuki/node-hariko/commit/99d9670))
-* fix output multiple responses
- ([2f3c66c](https://github.com/rymizuki/node-hariko/commit/2f3c66c))
-* Merge pull request #7 from 170/fix/output_multiple_responses
- ([2054699](https://github.com/rymizuki/node-hariko/commit/2054699))
+### Bug Fixes
+
+* **travis:** indantation miss ([e40ffe0](https://github.com/rymizuki/node-hariko/commit/e40ffe0))
 
 
+### Features
 
-<a name="1.1.2"></a>
-## 1.1.2 (2016-06-18)
-
-
-### chore
-
-* chore(travis): update GCC
- ([db3d781](https://github.com/rymizuki/node-hariko/commit/db3d781))
-
-### feat
-
-* feat(hariko): update protagonist
- ([08e27a6](https://github.com/rymizuki/node-hariko/commit/08e27a6))
-
-### fix
-
-* fix(travis): indantation miss
- ([e40ffe0](https://github.com/rymizuki/node-hariko/commit/e40ffe0))
-
-* Merge pull request #6 from rymizuki/node_v4
- ([539d82f](https://github.com/rymizuki/node-hariko/commit/539d82f))
+* **hariko:** update protagonist ([08e27a6](https://github.com/rymizuki/node-hariko/commit/08e27a6))
 
 
 
-<a name="1.1.1"></a>
-## 1.1.1 (2015-09-18)
+## [1.1.1](https://github.com/rymizuki/node-hariko/compare/v1.1.0...v1.1.1) (2015-09-18)
 
 
-### chore
+### Bug Fixes
 
-* chore: add codeclimate's badges in README
- ([701b07e](https://github.com/rymizuki/node-hariko/commit/701b07e))
-* chore: add jshint
- ([c8c95e2](https://github.com/rymizuki/node-hariko/commit/c8c95e2))
-* chore: setting for codeclimate's coverage
- ([7ffdf20](https://github.com/rymizuki/node-hariko/commit/7ffdf20))
-* chore(README): add codacy's badge
- ([7fc34d6](https://github.com/rymizuki/node-hariko/commit/7fc34d6))
-
-### fix
-
-* fix(server): #3 add cors option
- ([309005b](https://github.com/rymizuki/node-hariko/commit/309005b))
-
-* Merge pull request #4 from rymizuki/dose_not_pass_the_cors_option_to_server
- ([23f5ef0](https://github.com/rymizuki/node-hariko/commit/23f5ef0))
+* **server:** [#3](https://github.com/rymizuki/node-hariko/issues/3) add cors option ([309005b](https://github.com/rymizuki/node-hariko/commit/309005b))
 
 
 
-<a name="1.1.0"></a>
-# 1.1.0 (2015-07-23)
+# [1.1.0](https://github.com/rymizuki/node-hariko/compare/v1.0.0...v1.1.0) (2015-07-23)
 
 
-* Merge branch 'master' into properly_matching_requests_when_multiple_examples
- ([d77e0fd](https://github.com/rymizuki/node-hariko/commit/d77e0fd))
-* Merge pull request #2 from rymizuki/properly_matching_requests_when_multiple_examples
- ([8c3e8c1](https://github.com/rymizuki/node-hariko/commit/8c3e8c1))
-* Properly matching requests when there are multiple examples.
- ([69f0dc8](https://github.com/rymizuki/node-hariko/commit/69f0dc8))
-* The version up in mversion and convention-changelog.
- ([77b4858](https://github.com/rymizuki/node-hariko/commit/77b4858))
-* update gaze to 0.6.4
- ([87799e6](https://github.com/rymizuki/node-hariko/commit/87799e6))
 
+# [1.0.0](https://github.com/rymizuki/node-hariko/compare/v0.0.5...v1.0.0) (2015-07-17)
+
+
+
+## [0.0.5](https://github.com/rymizuki/node-hariko/compare/v0.0.5-0...v0.0.5) (2015-07-14)
+
+
+
+## [0.0.5-0](https://github.com/rymizuki/node-hariko/compare/v0.0.4-0...v0.0.5-0) (2015-07-14)
+
+
+
+## [0.0.4-0](https://github.com/rymizuki/node-hariko/compare/v0.0.3...v0.0.4-0) (2015-07-10)
+
+
+
+## [0.0.3](https://github.com/rymizuki/node-hariko/compare/v0.0.2...v0.0.3) (2015-07-10)
+
+
+
+## [0.0.2](https://github.com/rymizuki/node-hariko/compare/v0.0.1...v0.0.2) (2015-07-10)
+
+
+
+## 0.0.1 (2015-07-10)
 
 
 
