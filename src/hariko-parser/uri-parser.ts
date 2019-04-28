@@ -12,7 +12,7 @@ export class UriParser {
   }
 
   /**
-   * `/path/{name}?param={value}`から`{template, queries, path}`に変換
+   * `/path/{name}{?param}`から`{template, queries, path}`に変換
    */
   parse() {
     return {
@@ -27,6 +27,13 @@ export class UriParser {
       .split(/\,|\{|\}/g)
       .map((param) => param.replace(PARAM_OPERATORS_REG, ''))
       .filter((param) => param.length)
+      .map((param) => {
+        if (!/=/.test(param)) {
+          return param
+        }
+        const [name, value] = param.split(/=/)
+        return { name, value: decodeURIComponent(value) }
+      })
   }
 
   /**
