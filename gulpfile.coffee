@@ -3,7 +3,12 @@ gulp = require('gulp')
 gulp.task 'lib', ->
   jshint  = require('gulp-jshint')
   stylish = require('jshint-stylish')
-  gulp.src([ './lib/*.js', './lib/**/*.js' ])
+  gulp.src([
+    './lib/*.js',
+    './lib/**/*.js',
+    '!./lib/hariko-parser/**/*.js',
+    '!./lib/hariko-parser/**/*.js',
+    ])
     .pipe jshint(
     )
     .pipe jshint.reporter(stylish)
