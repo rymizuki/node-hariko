@@ -1,3 +1,4 @@
+/* eslint-env mocha */
 import assert = require('assert')
 import { UriParser } from './uri-parser'
 

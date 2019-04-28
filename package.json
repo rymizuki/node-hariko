@@ -14,7 +14,7 @@
     "test:ts": "TS_NODE_FILES=true mocha --ui bdd --reporter spec --require espower-typescript/guess src/**/*.test.ts",
     "lint": "npm run lint:js && npm run lint:ts",
     "lint:js": "npx jshint --reporter=node_modules/jshint-stylish lib/**/*.js",
-    "lint:ts": "tslint --project .",
+    "lint:ts": "eslint src/**/*.ts",
     "bump": "mversion $1 -m '%s'"
   },
   "keywords": [
@@ -44,7 +44,11 @@
     "@types/json5": "0.0.30",
     "@types/mocha": "^5.2.6",
     "@types/node": "^11.13.8",
+    "@typescript-eslint/eslint-plugin": "^1.7.0",
     "conventional-changelog-cli": "^2.0.17",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.2.0",
+    "eslint-plugin-prettier": "^3.0.1",
     "espower-typescript": "^9.0.2",
     "expect.js": "^0.3.1",
     "jshint": "^2.10.2",
@@ -57,9 +61,6 @@
     "require-subvert": "^0.1.0",
     "sinon": "^1.15.4",
     "supertest": "^4.0.2",
-    "tslint": "^5.16.0",
-    "tslint-config-airbnb": "^5.11.1",
-    "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.4.5"
   },
   "directories": {
