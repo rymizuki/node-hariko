@@ -44,7 +44,7 @@
     "@types/json5": "0.0.30",
     "@types/mocha": "^5.2.6",
     "@types/node": "^11.13.8",
-    "conventional-changelog": "^0.1.3",
+    "conventional-changelog-cli": "^2.0.17",
     "espower-typescript": "^9.0.2",
     "expect.js": "^0.3.1",
     "jshint": "^2.10.2",
