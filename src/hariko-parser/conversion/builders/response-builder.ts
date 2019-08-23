@@ -1,4 +1,5 @@
 import { HttpResponse } from '../../structure/http-response'
+import JSON from 'json5'
 
 export class ResponseBuilder {
   constructor(private http_response: HttpResponse) {}

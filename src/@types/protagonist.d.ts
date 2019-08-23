@@ -9,10 +9,15 @@ declare module 'protagonist' {
 
   export type ProtagonistParseResult = {
     element: 'parseResult'
-    content: {
-      element: 'category'
-      content: (ProtagonistResource | ProtagonistAnnotation)[]
-    }[]
+    content: ProtagonistCategory[]
+  }
+
+  export type ProtagonistCategory = {
+    element: 'category'
+    content: (
+      | ProtagonistCategory
+      | ProtagonistResource
+      | ProtagonistAnnotation)[]
   }
 
   export type ProtagonistAnnotation = {
