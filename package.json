@@ -12,6 +12,7 @@
     "test": "npm run lint && npm run test:js && npm run test:ts",
     "test:js": "mocha --ui bdd --reporter spec test/**/*.js",
     "test:ts": "TS_NODE_FILES=true mocha --ui bdd --reporter spec --require espower-typescript/guess src/**/*.test.ts",
+    "test:cases": "TS_NODE_FILES=true mocha --ui bdd --reporter spec --require espower-typescript/guess test/case/**/*.test.ts",
     "lint": "npm run lint:js && npm run lint:ts",
     "lint:js": "npx jshint --reporter=node_modules/jshint-stylish lib/**/*.js",
     "lint:ts": "eslint src/**/*.ts",
