@@ -1,0 +1,2 @@
+#!/bin/sh
+docker build -t hariko -f docker-dev/Dockerfile .
