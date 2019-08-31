@@ -14,6 +14,7 @@ COPY ./index.js /usr/local/docker/app
 COPY ./src /usr/local/docker/app/src
 COPY ./lib /usr/local/docker/app/lib
 COPY ./bin /usr/local/docker/app/bin
+COPY ./test /usr/local/docker/app/test
 
 RUN npm ci \
   && npm run build
