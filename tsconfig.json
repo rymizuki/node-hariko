@@ -14,7 +14,7 @@
     "skipDefaultLibCheck": true,
     "experimentalDecorators": true,
     "pretty": true,
-    "outDir": "lib/hariko-parser"
+    "outDir": "lib/dist"
   },
   "include": ["src/**/*"],
   "exclude": ["src/**/*.test.ts"]
