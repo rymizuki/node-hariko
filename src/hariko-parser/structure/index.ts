@@ -6,7 +6,6 @@ import {
 } from 'protagonist'
 import { ResourcesStructure } from './resources'
 import { AnnotationsStructure } from './annotations'
-import { logger } from '../../hariko-logger'
 
 class Builder {
   private resources: ResourcesStructure

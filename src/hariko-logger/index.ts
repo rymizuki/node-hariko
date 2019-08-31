@@ -35,7 +35,7 @@ export class Logger {
   log(level: LevelType, ...args: any[]) {
     // logger.log(level, 'format text', arg1, arg2 ...);
     if (LOG_LEVELS[this.level] > LOG_LEVELS[level]) return
-    console.log.apply(console, this.format(level, args))
+    console.log.apply(console, this.format(level, args)) // eslint-disable-line no-console
   }
   format(level: LevelType, args: any[]) {
     var format = args.shift()
