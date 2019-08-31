@@ -66,10 +66,15 @@ declare module 'protagonist' {
         content: string
       }
     }
-    content: {
-      element: 'httpTransaction'
-      content: [ProtagonistHttpRequest, ProtagonistHttpResponse]
-    }[]
+    content: (
+      | {
+          element: 'httpTransaction'
+          content: [ProtagonistHttpRequest, ProtagonistHttpResponse]
+        }
+      | {
+          element: 'copy'
+          content: any
+        })[]
   }
   export type ProtagonistHttpRequest = {
     element: 'httpRequest'
@@ -89,7 +94,7 @@ declare module 'protagonist' {
   }
   export type ProtagonistHttpResponse = {
     element: 'httpResponse'
-    attributes: {
+    attributes?: {
       statusCode: {
         element: 'number'
         content: number

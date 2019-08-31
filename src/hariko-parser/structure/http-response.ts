@@ -40,9 +40,9 @@ export class HttpResponse {
   ) {
     return new HttpResponse(
       http_transaction,
-      data.attributes.statusCode.content,
+      data.attributes ? data.attributes.statusCode.content : 200,
       HttpResponseHeaders.create(data),
-      data.content[0].content
+      data.content.length ? data.content[0].content : ''
     )
   }
 }
@@ -84,6 +84,9 @@ export class HttpResponseHeaders {
 
   static create(data: ProtagonistHttpResponse) {
     const headers = new HttpResponseHeaders()
+    if (!data.attributes) {
+      return headers
+    }
     data.attributes.headers.content.forEach((member) => {
       headers.set(member.content.key.content, member.content.value.content)
     })

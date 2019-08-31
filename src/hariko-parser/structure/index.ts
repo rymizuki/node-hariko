@@ -6,6 +6,7 @@ import {
 } from 'protagonist'
 import { ResourcesStructure } from './resources'
 import { AnnotationsStructure } from './annotations'
+import { logger } from '../../hariko-logger'
 
 class Builder {
   private resources: ResourcesStructure
@@ -53,6 +54,10 @@ class Builder {
       const transition = resource.createTransition(transition_data)
 
       transition_data.content.forEach((http_transaction_data) => {
+        if (http_transaction_data.element == 'copy') {
+          return
+        }
+
         const http_transaction = transition.createHttpTransaction()
 
         http_transaction.setHttpRequest(
