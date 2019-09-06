@@ -1,6 +1,7 @@
 /.node-version
 node_modules/
 /coverage
+/.nyc_output/
 .output/
 .DS_Store
 .swp
