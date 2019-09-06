@@ -9,7 +9,7 @@
   "scripts": {
     "start": "gulp",
     "build": "npm run lint && tsc",
-    "test": "npm run lint && npm run test:js && npm run test:ts",
+    "test": "npm run lint && npm run test:js && npm run test:ts && npm run test:cases",
     "test:js": "mocha --ui bdd --reporter spec test/**/*.js",
     "test:ts": "TS_NODE_FILES=true mocha --ui bdd --reporter spec --require espower-typescript/guess src/**/*.test.ts",
     "test:cases": "TS_NODE_FILES=true mocha --ui bdd --reporter spec --require espower-typescript/guess test/case/**/*.test.ts",

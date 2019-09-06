@@ -1,0 +1,35 @@
+# Case 3 [POST /case/03]
+​
++ Relation: self
+​
++ Request basic (application/json)
+​
+    + Attributes
+​
+        + name :'tarou' (string) - user name
+        + age  :19      (number) - user age
+​
+    + Body
+​
+            {
+              name: 'tarou',
+              age: 19
+            }
+​
++ Response 200 (application/json; charset=utf8)
+​
+    + Headers
+​
+    + Attributes
+​
+        + id : 1 (number) - user's id
+        + name: 'tarou'  (string) - user's name
+        + created_at: '2019-09-09 01:01:01' (string) - create datetime
+​
+    + Body
+​
+            {
+              id: 1,
+              name: 'tarou',
+              created_at: '2019-09-09 01:01:01'
+            }

@@ -112,6 +112,17 @@ declare module 'protagonist' {
     }
     content: {
       element: 'asset'
+      meta?: {
+        classes: {
+          element: 'array'
+          content: [
+            {
+              element: 'string'
+              content: 'messageBody' | 'messageBodySchema'
+            }
+          ]
+        }
+      }
       attributes: {
         contentType: {
           element: 'string'

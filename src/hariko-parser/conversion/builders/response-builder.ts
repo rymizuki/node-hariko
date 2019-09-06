@@ -18,7 +18,8 @@ export class ResponseBuilder {
 
   get data() {
     if (this.http_response.isJsonResponse()) {
-      return JSON.parse(this.body)
+      // remove zero width space
+      return JSON.parse(this.body.replace(/[\u200B-\u200D\uFEFF]/g, ''))
     }
     return null
   }
