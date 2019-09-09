@@ -132,4 +132,9 @@ declare module 'protagonist' {
       content: string
     }[]
   }
+
+  export type ProtagonistCopy = {
+    element: 'copy'
+    content: string
+  }
 }

@@ -2,7 +2,8 @@ import {
   ProtagonistParseResult,
   ProtagonistResource,
   ProtagonistAnnotation,
-  ProtagonistCategory
+  ProtagonistCategory,
+  ProtagonistCopy
 } from 'protagonist'
 import { ResourcesStructure } from './resources'
 import { AnnotationsStructure } from './annotations'
@@ -22,7 +23,11 @@ class Builder {
   }
 
   private dispatch(
-    rows: (ProtagonistAnnotation | ProtagonistResource | ProtagonistCategory)[]
+    rows: (
+      | ProtagonistAnnotation
+      | ProtagonistResource
+      | ProtagonistCategory
+      | ProtagonistCopy)[]
   ) {
     rows.forEach((row) => {
       if (row.element === 'annotation') {
@@ -37,6 +42,10 @@ class Builder {
 
       if (row.element === 'category') {
         this.dispatch(row.content)
+        return
+      }
+
+      if (row.element === 'copy') {
         return
       }
 
