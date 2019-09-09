@@ -1,3 +1,21 @@
+## [1.2.1](https://github.com/rymizuki/node-hariko/compare/v1.2.0...v1.2.1) (2019-09-09)
+
+
+### Bug Fixes
+
+* added test case have a some copy ([92ba325](https://github.com/rymizuki/node-hariko/commit/92ba325))
+* **hariko-parser:** support case on document has attributes [#20](https://github.com/rymizuki/node-hariko/issues/20) ([a89b99f](https://github.com/rymizuki/node-hariko/commit/a89b99f))
+
+
+### Features
+
+* **hariko-logger:** logger make from lib [#20](https://github.com/rymizuki/node-hariko/issues/20) ([470492b](https://github.com/rymizuki/node-hariko/commit/470492b))
+* **hariko-parser:** support body content is zero case [#20](https://github.com/rymizuki/node-hariko/issues/20) ([a2de647](https://github.com/rymizuki/node-hariko/commit/a2de647))
+* **hariko-parser:** support case on document has copy in group section ([394f958](https://github.com/rymizuki/node-hariko/commit/394f958))
+* **hariko-parser:** support category in category structure ([dd402c3](https://github.com/rymizuki/node-hariko/commit/dd402c3))
+
+
+
 # [1.2.0](https://github.com/rymizuki/node-hariko/compare/v1.1.7...v1.2.0) (2019-04-28)
 
 
