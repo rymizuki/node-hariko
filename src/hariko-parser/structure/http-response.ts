@@ -38,11 +38,32 @@ export class HttpResponse {
     http_transaction: HttpTransaction,
     data: ProtagonistHttpResponse
   ) {
+    const status = data.attributes ? data.attributes.statusCode.content : 200
+    const messageBody = data.content.find((content) => {
+      return (
+        content.element === 'asset' &&
+        content.meta &&
+        content.meta.classes.content[0].content === 'messageBody'
+      )
+    })
+
+    if (messageBody) {
+      const headers = new HttpResponseHeaders()
+      headers.set('Content-Type', messageBody.attributes.contentType.content)
+
+      return new HttpResponse(
+        http_transaction,
+        status,
+        headers,
+        messageBody.content
+      )
+    }
+
     return new HttpResponse(
       http_transaction,
-      data.attributes.statusCode.content,
+      status,
       HttpResponseHeaders.create(data),
-      data.content[0].content
+      data.content.length ? data.content[0].content : ''
     )
   }
 }
@@ -71,6 +92,10 @@ export class HttpResponseHeaders {
     return header ? header.value : null
   }
 
+  hasContentType() {
+    return this.indexOf('Content-Type') >= 0
+  }
+
   indexOf(name: string) {
     for (let i = 0; i < this.rows.length; i += 1) {
       if (this.rows[i].name === name) return i
@@ -84,10 +109,18 @@ export class HttpResponseHeaders {
 
   static create(data: ProtagonistHttpResponse) {
     const headers = new HttpResponseHeaders()
+    if (!data.attributes) {
+      return headers
+    }
     data.attributes.headers.content.forEach((member) => {
       headers.set(member.content.key.content, member.content.value.content)
     })
-    headers.set('Content-Type', data.content[0].attributes.contentType.content)
+    if (!headers.hasContentType()) {
+      headers.set(
+        'Content-Type',
+        data.content[0].attributes.contentType.content
+      )
+    }
     return headers
   }
 }

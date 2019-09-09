@@ -170,6 +170,22 @@ hariko.start({ file: 'docs/**/*.md' }, function() {
 })
 ```
 
+## Development
+
+### run build
+
+```console
+> ./docker-dev/bin/build
+> docker run --rm -it -v$(pwd):/usr/local/docker/app --name hariko hariko npm run build
+```
+
+### run tests
+
+```console
+> ./docker-dev/bin/build
+> docker run --rm -it --name hariko hariko npm test
+```
+
 ## License
 
 MIT

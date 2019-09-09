@@ -9,10 +9,15 @@ declare module 'protagonist' {
 
   export type ProtagonistParseResult = {
     element: 'parseResult'
-    content: {
-      element: 'category'
-      content: (ProtagonistResource | ProtagonistAnnotation)[]
-    }[]
+    content: ProtagonistCategory[]
+  }
+
+  export type ProtagonistCategory = {
+    element: 'category'
+    content: (
+      | ProtagonistCategory
+      | ProtagonistResource
+      | ProtagonistAnnotation)[]
   }
 
   export type ProtagonistAnnotation = {
@@ -61,10 +66,15 @@ declare module 'protagonist' {
         content: string
       }
     }
-    content: {
-      element: 'httpTransaction'
-      content: [ProtagonistHttpRequest, ProtagonistHttpResponse]
-    }[]
+    content: (
+      | {
+          element: 'httpTransaction'
+          content: [ProtagonistHttpRequest, ProtagonistHttpResponse]
+        }
+      | {
+          element: 'copy'
+          content: any
+        })[]
   }
   export type ProtagonistHttpRequest = {
     element: 'httpRequest'
@@ -84,7 +94,7 @@ declare module 'protagonist' {
   }
   export type ProtagonistHttpResponse = {
     element: 'httpResponse'
-    attributes: {
+    attributes?: {
       statusCode: {
         element: 'number'
         content: number
@@ -102,6 +112,17 @@ declare module 'protagonist' {
     }
     content: {
       element: 'asset'
+      meta?: {
+        classes: {
+          element: 'array'
+          content: [
+            {
+              element: 'string'
+              content: 'messageBody' | 'messageBodySchema'
+            }
+          ]
+        }
+      }
       attributes: {
         contentType: {
           element: 'string'
@@ -110,5 +131,10 @@ declare module 'protagonist' {
       }
       content: string
     }[]
+  }
+
+  export type ProtagonistCopy = {
+    element: 'copy'
+    content: string
   }
 }

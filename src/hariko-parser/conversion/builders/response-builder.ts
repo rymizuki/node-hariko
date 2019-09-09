@@ -1,4 +1,5 @@
 import { HttpResponse } from '../../structure/http-response'
+import JSON from 'json5'
 
 export class ResponseBuilder {
   constructor(private http_response: HttpResponse) {}
@@ -17,7 +18,11 @@ export class ResponseBuilder {
 
   get data() {
     if (this.http_response.isJsonResponse()) {
-      return JSON.parse(this.body)
+      if (!this.body.length) {
+        return {}
+      }
+      // remove zero width space
+      return JSON.parse(this.body.replace(/[\u200B-\u200D\uFEFF]/g, ''))
     }
     return null
   }
