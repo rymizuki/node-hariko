@@ -92,6 +92,10 @@ export class HttpResponseHeaders {
     return header ? header.value : null
   }
 
+  hasContentType() {
+    return this.indexOf('Content-Type') >= 0
+  }
+
   indexOf(name: string) {
     for (let i = 0; i < this.rows.length; i += 1) {
       if (this.rows[i].name === name) return i
@@ -111,7 +115,12 @@ export class HttpResponseHeaders {
     data.attributes.headers.content.forEach((member) => {
       headers.set(member.content.key.content, member.content.value.content)
     })
-    headers.set('Content-Type', data.content[0].attributes.contentType.content)
+    if (!headers.hasContentType()) {
+      headers.set(
+        'Content-Type',
+        data.content[0].attributes.contentType.content
+      )
+    }
     return headers
   }
 }
