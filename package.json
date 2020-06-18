@@ -57,7 +57,7 @@
     "jshint-stylish": "^2.2.1",
     "mocha": "^6.1.4",
     "mocha-lcov-reporter": "0.0.2",
-    "mversion": "^1.10.0",
+    "mversion": "^2.0.0",
     "power-assert": "^1.6.1",
     "prettier": "^1.17.0",
     "require-subvert": "^0.1.0",
